@@ -4,7 +4,7 @@ This repository contains multiple documentation files related with [dolater.io](
 
 ## Index
 
-+ [Images](/dolaterio/docs/blob/master/images.md)
-+ [Jobs](/dolaterio/docs/blob/master/jobs.md)
-+ [Examples](/dolaterio/docs/blob/master/examples.md)
-+ [Integrate with your application](/dolaterio/docs/blob/master/integration.md)
++ [Images](images.md)
++ [Jobs](jobs.md)
++ [Examples](examples.md)
++ [Integrate with your application](integration.md)
