@@ -14,7 +14,7 @@ Access to your admin interface at [http://dolater.io/admin](http://dolater.io/ad
 
 In the new image form type any name for your image. In the _docker image_ field type `dolaterio/asciify` to use our docker image to convert images to ASCII.
 
-![New dolater image](new_image_form.png)
+![New dolater image](images/new_image_form.png)
 
 For this example we don't need to set any environment variables, so proceed and save the image.
 
@@ -27,13 +27,13 @@ There are two ways to create jobs, using the web interface or sending an HTTP re
 
 Once the image is created you'll see the following view
 
-![Image created](image_created.png)
+![Image created](images/image_created.png)
 
 Click on _Jobs_ to access the list of jobs for this image. It's empty for now. Click on _New job_.
 
 Our asciify app takes the image URL from the _STDIN_, so just paste any image URL to the _STDIN_ field. If you don't have any image url in mind, you can use `http://placekitten.com/g/300/300` like in the example.
 
-![New job](new_job.png)
+![New job](images/new_job.png)
 
 Click on `Create job` and our servers will pick your job and run it.
 
@@ -61,4 +61,4 @@ Our asciify image prints out the ascii image to the STDOUT. Open the list of job
 
 Click on _View_ of your job to see its details. Eventually you should see your image in ASCII.
 
-![ASCII cat](ascii_cat.png)
+![ASCII cat](images/ascii_cat.png)
