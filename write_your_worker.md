@@ -1,35 +1,33 @@
-# How to write a worker
+# How to write a dolater.io worker
 
-This document will guide you through the creation of a worker to be executed in dolater.io.
+This document will guide you through the creation of a *dolater.io* worker.
 
-While you code your worker keep in mind that dolater.io executes it for each job.
+## Configuration via environment variables
 
-# Configuration variables
+All configuration for your worker should be stored in environment variables.
 
-Any configuration should be passed to your worker using environment variables.
+Environment variables can be set (1) within your worker image or (2) in the job.
 
-There are two ways you can send environment variables to your job, from the image or from the job itself.
+## Send job-specific data via STDIN
 
-# Standard Input
+Your worker may need some data to run a job. When queuing a job, send data to the worker using the standard input stream.
 
-When you queue a job you might need to send some data to it. This data is specific to the job and is sent to the process through the standard input stream.
+If you're not sure how to read from the standard input, check our [examples](examples/). Drop us an [email](mailto:admin@dolater.io) if you're having trouble and we'll help you out.
 
-If you are not sure how to read from the standard input, check our examples. If you still can't make it work, please let us know and we'll assist you.
+## Build a docker container with your worker
 
-There's no length limit for the standard input, but if it becomes an issue some day we might limit it, so please try to send __just__ the data you need to avoid future problems.
+You'll need to wrap your worker in a docker image. The easiest way to get up to speed on creating a _Dockerfile_ and building a docker image is by reading the [Dockerfile reference](https://docs.docker.com/reference/builder/). There are plenty of Dockerfiles you can use as a reference, you'll just have to search a bit. If you need help, drop us an [email](mailto:admin@dolater.io).
 
-# Build a docker container with your worker
+dolater.io runs the image as it is, so keep in `CMD` the exact command to execute your worker.
 
-You'll need to wrap your worker in a docker imager. If you don't know how to do it, start reading the [Dockerfile reference](https://docs.docker.com/reference/builder/). You'll learn how to create a _Dockerfile_ and build an image. There're plenty of Dockerfiles you can use as a reference, you'll just have to search a bit. Again, if you're not sure how to make this work, don't hesitate to contact us.
-
-dolater runs the image as it is, so keep in `CMD` the exact command to execute your worker.
+## Monitoring STDOUT & STDERR when a job runs
 
 To test is your image is working, run it in docker with `echo YOUR_STDIN | docker run -i -e ENV_1=a -e ENV_2=b your/image` replacing `YOUR_STDIN` with the standard input you want to send to the process and replacing the environment variables with whatever your image needs.
 
-dolater will capture the standard output and stardard error, so whatever you see when you run the process will be available too in dolater.
+When a job runs on dolater.io, we capture the standard output and standard error, so whatever you see when you run the process will be available.
 
-# Publish your image
+## Publish your image
 
-Right now dolater.io only supports public images stored at [the public docker hub](https://hub.docker.com/). Chec this guide on [How to work with Docker Hub](http://docs.docker.com/userguide/dockerrepos/) to learn how to publish your images.
+Right now dolater.io only supports public images stored at [the public docker hub](https://hub.docker.com/). See [How to work with Docker Hub](http://docs.docker.com/userguide/dockerrepos/) for a guide on publishing your images.
 
-We will add support to private images as soon as the docker hub has a good support for external read-only permissions.
+We will be able to support private images when external read-only permissions are introduced.
