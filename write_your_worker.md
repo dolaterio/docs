@@ -2,6 +2,8 @@
 
 This document will guide you through the creation of a *dolater.io* worker.
 
+We have some [templates](https://github.com/dolaterio/templates) in different languages with the simplest structure for your worker.
+
 ## Configuration via environment variables
 
 All configuration for your worker should be stored in environment variables.
