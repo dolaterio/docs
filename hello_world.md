@@ -57,7 +57,12 @@ docker build -t yourhandler/hello_world .
 
 This will load the `Dockerfile` in the current directory and will use it to build a docker image tagged as `yourhandler/hello_world`.
 
-It will take a while to build.
+It will take a while to build. Once it's finished, test it running:
+
+```
+$ docker run --rm yourhandler/hello_world
+Hello world
+```
 
 ## Upload your docker image to the public registry
 
