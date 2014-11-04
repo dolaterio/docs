@@ -78,6 +78,8 @@ Access [your images on dolater.io](http://dolater.io/admin/images) and click on 
 
 Type `Hello world` as _Name_ and `yourhandler/hello_world` as _Docker image_ and click on _Create image_.
 
+# Run it on dolater.io
+
 Once the image is created, click on _View Jobs_ to access the jobs of the image and click on _New job_ and _Create Job_. Since the worker doesn't need any input we don't need any other information for it.
 
 As soon as you click on _Create Job_, we will run the job on a free slot in our servers. The first time you run it might take a while because we have to pull the image from the docker hub.
