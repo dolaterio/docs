@@ -71,7 +71,7 @@ docker push yourhandler/hello_world
 
 Access [your images on dolater.io](http://dolater.io/admin/images) and click on _New image_.
 
-Type `Hello world as _Name_ and `yourhandler/hello_world` as _Docker image_ and click on _Create image_.
+Type `Hello world` as _Name_ and `yourhandler/hello_world` as _Docker image_ and click on _Create image_.
 
 Once the image is created, click on _View Jobs_ to access the jobs of the image and click on _New job_ and _Create Job_. Since the worker doesn't need any input we don't need any other information for it.
 
