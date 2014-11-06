@@ -1,3 +1,4 @@
+
 # Build your own Hello World worker!
 
 This article will guide you through the creation of a worker that will return "Hello world". The worker will be written in ruby.
@@ -6,7 +7,7 @@ This article will guide you through the creation of a worker that will return "H
 
 You will need an account in the [public docker registry](https://hub.docker.com/). Just signup and you'll be ready to go.
 
-In the documentation I use `yourhandler` to represent your docker hub username. Replace it with the right value.
+In the documentation I use `yourhandle` to represent your docker hub username. Replace it with the right value.
 
 You will also need an account on [dolater.io](http://dolater.io).
 
@@ -52,15 +53,15 @@ This file is used to create the docker image. Visit the [Dockerfile documentatio
 Once you have both files in the worker directory you have to build the docker image.
 
 ```
-docker build -t yourhandler/hello_world .
+docker build -t yourhandle/hello_world .
 ```
 
-This will load the `Dockerfile` in the current directory and will use it to build a docker image tagged as `yourhandler/hello_world`.
+This will load the `Dockerfile` in the current directory and will use it to build a docker image tagged as `yourhandle/hello_world`.
 
 It will take a while to build. Once it's finished, test it running:
 
 ```
-$ docker run --rm yourhandler/hello_world
+$ docker run --rm yourhandle/hello_world
 Hello world
 ```
 
@@ -69,14 +70,14 @@ Hello world
 Just push the image:
 
 ```
-docker push yourhandler/hello_world
+docker push yourhandle/hello_world
 ```
 
 ## Submit your image to dolater.io
 
 Access [your images on dolater.io](http://dolater.io/admin/images) and click on _New image_.
 
-Type `Hello world` as _Name_ and `yourhandler/hello_world` as _Docker image_ and click on _Create image_.
+Type `Hello world` as _Name_ and `yourhandle/hello_world` as _Docker image_ and click on _Create image_.
 
 ## Run it on dolater.io
 
