@@ -75,14 +75,14 @@ docker push yourhandle/hello_world
 
 ## Submit your image to dolater.io
 
-Access [your images on dolater.io](http://dolater.io/admin/images) and click on _New image_.
+Access [your images on dolater.io](http://dolater.io/images) and click on _New image_.
 
 Type `Hello world` as _Name_ and `yourhandle/hello_world` as _Docker image_ and click on _Create image_.
 
 ## Run it on dolater.io
 
-Once the image is created, click on _View Jobs_ to access the jobs of the image and click on _New job_ and _Create Job_. Since the worker doesn't need any input we don't need any other information for it.
+Access [your jobs on dolater.io](http://dolater.io/jobs) and click on _New job_. Select the image you've created previously from the _image_ selector and click _Create job_. Since the worker doesn't need any input we don't need any other information for it.
 
 As soon as you click on _Create Job_, we will run the job on a free slot in our servers. The first time you run it might take a while because we have to pull the image from the docker hub.
 
-Keep refreshing the job page until the state of the job is `completed`. You'll see "Hello world" in the _STDOUT_
+Keep refreshing the job details page until the state of the job is `completed`. You'll see "Hello world" in the _STDOUT_ field.
