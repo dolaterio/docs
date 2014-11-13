@@ -36,6 +36,6 @@ Our image resizer needs a json object in the STDIN with the job information. Typ
 
 You can also try with a different image url. Check the main documentation of the [Simple Image Resizer](https://github.com/dolaterio/simple_image_resizer) for more information about the payload.
 
-### 4. Check the job results
+## 4. Check the job results
 
 Once the job is submitted, you can track its status on the admin interface. Once the job is _completed_ without errors, check your S3 bucket and you'll see the resized image.
