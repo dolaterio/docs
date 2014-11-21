@@ -6,6 +6,7 @@ This repository contains multiple documentation files related with [dolater.io](
 
 + [Images](images.md)
 + [Jobs](jobs.md)
++ [Webhooks](webhooks.md)
 + [Guide: Hello world](hello_world.md)
 + [Guide: Write your worker](write_your_worker.md)
 + Examples
