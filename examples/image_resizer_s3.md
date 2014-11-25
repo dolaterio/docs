@@ -8,7 +8,7 @@ For this example we've created a [docker image that resizes an image and uploads
 
 ## 2. Create a dolater.io image
 
-Access to your admin interface at [http://dolater.io/admin](http://dolater.io/admin) and click on _New Image_.
+Access to your images interface at [http://dolater.io/images](http://dolater.io/images) and click on _New Image_.
 
 In the new image form type any name for your image. In the _docker image_ field type `dolaterio/simple-image-resizer` to use our docker image that resizes an image and uploads it to S3.
 
